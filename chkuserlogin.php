@@ -8,7 +8,7 @@ if(isset($_SESSION['username']))
 $email= $_POST['email'];
 $pass= $_POST['pass'];
 
-$conn=mysqli_connect('localhost','root','','hashmi');
+$conn=mysqli_connect('localhost','root','','stone-palace');
 
  
 

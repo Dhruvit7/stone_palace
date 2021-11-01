@@ -5,7 +5,7 @@ echo" <script>window.location.href = 'index.php'</script>";
 }
 
 
-$conn=mysqli_connect('localhost','root','','hashmi');
+$conn=mysqli_connect('localhost','root','','stone_palace');
 
 $date =('j/m/Y');
 $i=0;
@@ -17,37 +17,9 @@ $i1=0;
 		$res=mysqli_query($conn,$qur);
 		if($res)
 		{
-			while($row=mysqli_fetch_assoc($res))
-			{
-				$i++;
-				$lastdate=$row['date'];
-			}
-			$lastdate =(int)$date;
-			
-			while($row=mysqli_fetch_assoc($res))
-			{
-				
-				$chk=$row['date'];
-				$chk =(int)$chk;
-				if($chk==($lastdate-1)||$chk==$lastdate)
-				{
-					$i1++;
-				}
-			}
+			$i1++;
 		}
 		$i2=0;
-		$qur="SELECT * FROM `visitor`";
-		$res=mysqli_query($conn,$qur);
-		if($res)
-		{
-		
-			while($row=mysqli_fetch_assoc($res))
-			{
-				$i2++;
-				
-			}
-		}
-		$i3=0;
 		$qur="SELECT * FROM `products`";
 		$res=mysqli_query($conn,$qur);
 		if($res)
@@ -55,7 +27,7 @@ $i1=0;
 		
 			while($row=mysqli_fetch_assoc($res))
 			{
-				$i3++;
+				$i2++;
 				
 			}
 		}
@@ -111,114 +83,11 @@ $i1=0;
     <!--<script src="lib/html5shiv/html5shiv.js"></script>-->
      <!-- Chartinator  -->
     <script src="js/chartinator.js" ></script>
-    <script type="text/javascript">
-        jQuery(function ($) {
-
-            var chart3 = $('#geoChart').chartinator({
-                tableSel: '.geoChart',
-
-                columns: [{role: 'tooltip', type: 'string'}],
-         
-                colIndexes: [2],
-             
-                rows: [
-                    ['China - 2015'],
-                    ['Colombia - 2015'],
-                    ['France - 2015'],
-                    ['Italy - 2015'],
-                    ['Japan - 2015'],
-                    ['Kazakhstan - 2015'],
-                    ['Mexico - 2015'],
-                    ['Poland - 2015'],
-                    ['Russia - 2015'],
-                    ['Spain - 2015'],
-                    ['Tanzania - 2015'],
-                    ['Turkey - 2015']],
-              
-                ignoreCol: [2],
-              
-                chartType: 'GeoChart',
-              
-                chartAspectRatio: 1.5,
-             
-                chartZoom: 1.75,
-             
-                chartOffset: [-12,0],
-             
-                chartOptions: {
-                  
-                    width: null,
-                 
-                    backgroundColor: '#fff',
-                 
-                    datalessRegionColor: '#F5F5F5',
-               
-                    region: 'world',
-                  
-                    resolution: 'countries',
-                 
-                    legend: 'none',
-
-                    colorAxis: {
-                       
-                        colors: ['#679CCA', '#337AB7']
-                    },
-                    tooltip: {
-                     
-                        trigger: 'focus',
-
-                        isHtml: true
-                    }
-                }
-
-               
-            });                       
-        });
-    </script>
-<!--geo chart-->
-
-<!--skycons-icons-->
-<script src="js/skycons.js"></script>
-<!--//skycons-icons-->
-</head>
-<style>
-        #autoresizing { 
-            display: block; 
-            overflow: hidden; 
-            resize: none; 
-        } 
-</style>
-<body>
-<script src='../../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script><script src="../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
-
-<script src="../../../../../codefund.io/properties/441/funder.js" async="async"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src='https://www.googletagmanager.com/gtag/js?id=UA-149859901-1'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149859901-1');
-</script>
-
-<script>
-     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-     ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
-     ga('require', 'eventTracker');
-     ga('require', 'outboundLinkTracker');
-     ga('require', 'urlChangeTracker');
-     ga('send', 'pageview');
-   </script>
-<script async src='../../../../js/autotrack.js'></script>
 
 <meta name="robots" content="noindex">
 <body><link rel="stylesheet" href="../../../../images/demobar_w3_4thDec2019.css">
 	<!-- Demo bar start -->
-  
-</div>
-	
+  	
 <div class="page-container">	
    <div class="left-content">
 	   <div class="mother-grid-inner">
@@ -226,7 +95,7 @@ $i1=0;
 				<div class="header-main">
 					<div class="header">
 							<div class="logo-name">
-									 <a href="main.php"> <h1>Hashmi Fabrics </h1> 
+									 <a href="main.php"> <h1>Stone Palace</h1> 
 									<!--<img id="logo" src="" alt="Logo"/>--> 
 								  </a> 								
 							</div>
@@ -294,23 +163,10 @@ $i1=0;
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-4 market-update-gd">
-				<div class="market-update-block clr-block-2">
-				 <div class="col-md-8 market-update-left">
-					<h3><?php echo $i2; ?></h3>
-					<h4>Total </h4>
-					<p>Visitors</p>
-				  </div>
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-eye"> </i>
-					</div>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
 			<div class="col-md-4 market-update-gd" onclick="goproduct()">
 				<div class="market-update-block clr-block-3">
 					<div class="col-md-8 market-update-left">
-						<h3><?php  echo $i3 ; ?></h3>
+						<h3><?php  echo $i2 ; ?></h3>
 						<h4>Total </h4>
 						<p>Products</p>
 					</div>

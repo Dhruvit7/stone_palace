@@ -55,7 +55,7 @@ echo "<script>window.location.href = 'main.php';</script>";
   <div id="w3lDemoBar" class="w3l-demo-bar" style="background:rgb(51, 122, 183);">
   
    
-    <span class="w3l-text" style ="font-size: x-large;color:white;padding-left:2%;"  > Hashmi Fabrics Admin</span>
+    <span class="w3l-text" style ="font-size: x-large;color:white;padding-left:2%;"  > Admin Panel - StonePalace</span>
   
 </div>
 	
@@ -70,24 +70,9 @@ echo "<script>window.location.href = 'main.php';</script>";
 				<form method="POST" action="chklogin.php">
 					<input type="text" name="email" placeholder="Email" required >
 					<input type="password" name="password" class="lock" placeholder="Password" required >
-					<div class="forgot-top-grids">
-						<div class="forgot-grid">
-							<ul>
-								<li>
-									<input type="checkbox" id="brand1" value="">
-									<label for="brand1"><span></span>Remember me</label>
-								</li>
-							</ul>
-						</div>
-						<div class="forgot">
-							<a href="#">Forgot password?</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<input type="submit" name="Sign In" value="Login">	
-						
+					<input type="submit" name="Sign In" value="Login">		
 				</form>
-				<h5><a href="index.html">Go Back to Home</a></h5>
+				<h5><a href="../index.php">Go Back to Home</a></h5>
 			</div>
       </div>
 </div>

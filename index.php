@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('localhost','root','','hashmi');
+$conn=mysqli_connect('localhost','root','','stone-palace');
 
 session_start();
 
@@ -132,8 +132,11 @@ body {
   if(!isset($_SESSION["username"]))
 {
   ?>
-                           <a href="userlogin.php" style="" class="nav-item nav-link"><h5><b>
+               <a href="userlogin.php" style="" class="nav-item nav-link"><h5><b>
 						   Login
+						   <i class="fa fa-sign-in" aria-hidden="true"></i></b></h5></a>
+               <a href="Admin/index.php" style="" class="nav-item nav-link"><h5><b>
+						   Login-Admin
 						   <i class="fa fa-sign-in" aria-hidden="true"></i></b></h5></a>
  <?php 
 }
@@ -149,7 +152,7 @@ body {
 {
   ?>
     <a href="userlogin.php" style="font-size:large;" ><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In </h5></a>
-    <a href="usersignup.php" style="font-size:large;" ><h5><i class="fa fa-user" aria-hidden="true"></i> Suign Up </h5></a>
+    <a href="usersignup.php" style="font-size:large;" ><h5><i class="fa fa-user" aria-hidden="true"></i> Sign Up </h5></a>
   <a style="font-size:large;" href="about.php"><i class="fa fa-address-card"></i> About</a>
 	<?php 
 }
@@ -158,9 +161,9 @@ else
 	?>
 	<p style="width:80%;padding:20px;text-align:center;">Logged in as<small style="color:blue"> <?php echo $_SESSION["username"]; ?>
 </small></p>
-    <a href="cart.php" style="font-size:large;" ><h5><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart </h5></a>
-    <a href="orders.php" style="font-size:large;" ><h5><i class="fa fa-check"></i> My Order </h5></a>
-    <a href="userlogout.php" style="font-size:large;" ><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Logout </h5></a>
+    <a href="" style="font-size:large;" ><h5><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart </h5></a>
+    <a href="" style="font-size:large;" ><h5><i class="fa fa-check"></i> My Order </h5></a>
+    <a href="" style="font-size:large;" ><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Logout </h5></a>
 	<?php
 }
 	?>
