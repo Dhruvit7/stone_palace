@@ -9,7 +9,7 @@ if(isset($_SESSION['username']))
 ?>
 <html>
 <head>
-<title>stone-palace |Login</title>
+<title>stone-palaces |Login</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,7 +24,7 @@ if(isset($_SESSION['username']))
   border: 1px solid #dadce0;
   border-radius: .5rem;
 }
- 
+
 .card-signup .card-body {
   padding: 48px 40px 36px;
 }
@@ -70,9 +70,7 @@ if(isset($_SESSION['username']))
   box-shadow: none !important;
 }
 
-.md-form.mat-2 input[type=text],
-.md-form.mat-2 input[type=password],
-.md-form.mat-2 input[type=email] {
+.md-form.mat-2 input[type=name] {
   border-width: 1px !important;
   border-style: solid;
   border-color: #ced4da;
@@ -128,37 +126,19 @@ if(isset($_SESSION['username']))
       <div class="card card-signup z-depth-0">
         <div class="card-body text-center" style="font-size:x-large">
         
-        <h2 style="border-bottom:1px solid #3E065F; color:#3E065F;">  Stone Palace</h2>
-          <h3 class="card-title" style="color:#3E065F;">Sign In</h3>
+        <h2 style="border-bottom:1px solid black;">  Stone Palace</h2>
+          <h3 class="card-title">Forgot Password</h3>
           
         
-            <form action="chkuserlogin.php" method="POST" id="myloginform">
+            <form action="chkfg.php" method="POST" id="myloginform">
           <div class="md-form mat-2" style="margin-top:20px;">
-        	<label for="email">E-mail</label>
-        	<input type="email" id="email" class="form-control" name="email"> 
-      	  </div>
-            
-          <div class="md-form mat-2" style="margin-top:20px;">
-        	<label for="password">Password</label>
-        	<input type="password" id="password" class="form-control" name="pass">
-      	  </div>
-        
-          
+        	<label for="name">Enter email</label>
+        	<input type="text" id="name" class="form-control" name="name"> 
+      	  </div>  
           <div class="card-foter text-right"  style="margin-top:20px;">
-  		    <button type="button" class="btn " style="width: 140px; background-color:#3E065F; color:#ffffff;" onclick="document.getElementById('myloginform').submit();">Sign In</button>
+  		    <button type="button" class="btn btn-primary" style="width: 240px;" onclick="document.getElementById('myloginform').submit();">Reset My Password</button>
           </div>
 		  </form>
-<<<<<<< HEAD
-		  <div class="card-foter"  style="margin-top:20px;border-top:1px solid #3E065F;font-size:large">
-  		    <a href="usersignup.php" style="color:#3E065F;">Don't have account?</a>
-=======
-      <div class="forgot">
-							<a href="forgot-password.php">Forgot password?</a>
-						</div>
-		  <div class="card-foter"  style="margin-top:20px;border-top:1px solid aqua;font-size:large">
-  		    <a href="usersignup.php">Don't have account?</a>
->>>>>>> 80fc2e73f5faee41814edcdb3ba435bb6e21e6c3
-          </div>
         </div>
       </div>
     </div>
