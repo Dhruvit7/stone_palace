@@ -45,17 +45,17 @@ echo "<script>window.location.href = 'main.php';</script>";
 <meta name="robots" content="noindex">
 <body><link rel="stylesheet" href="../../../../images/demobar_w3_4thDec2019.css">
 	<!-- Demo bar start -->
-  <div id="w3lDemoBar" class="w3l-demo-bar" style="background:rgb(51, 122, 183);">
+  <div id="w3lDemoBar" class="w3l-demo-bar" style="background:#3E065F;">
   
    
     <span class="w3l-text" style ="font-size: x-large;color:white;padding-left:2%;"  > Stone-Palace Admin</span>
   
 </div>    
 	
-<div class="login-page" style="margin-top:0px;padding-top:10px;background:#aef5c3  " >
+<div class="login-page" style="margin-top:0px;padding-top:10px; " >
 <!---728x90--->
 
-    <div class="login-main" style="margin-top:0px;border-radius:12px;border-bottom:2px solid aqua;">  	
+    <div class="login-main" style="margin-top:0px;border-radius:12px;">  	
     	 <div class="login-head">
 				<h1>Log-in</h1>
 			</div>			

@@ -148,17 +148,14 @@ if(isset($_SESSION['username']))
   		    <button type="button" class="btn " style="width: 140px; background-color:#3E065F; color:#ffffff;" onclick="document.getElementById('myloginform').submit();">Sign In</button>
           </div>
 		  </form>
-<<<<<<< HEAD
+
 		  <div class="card-foter"  style="margin-top:20px;border-top:1px solid #3E065F;font-size:large">
   		    <a href="usersignup.php" style="color:#3E065F;">Don't have account?</a>
-=======
+
       <div class="forgot">
-							<a href="forgot-password.php">Forgot password?</a>
+							<a href="forgot-password.php" style="color:#3E065F;">Forgot password?</a>
 						</div>
-		  <div class="card-foter"  style="margin-top:20px;border-top:1px solid aqua;font-size:large">
-  		    <a href="usersignup.php">Don't have account?</a>
->>>>>>> 80fc2e73f5faee41814edcdb3ba435bb6e21e6c3
-          </div>
+		 
         </div>
       </div>
     </div>
