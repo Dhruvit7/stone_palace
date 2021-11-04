@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('localhost','root','','stone-palace');
+$conn=mysqli_connect('localhost','root','','stone_palace');
 
 session_start();
 
