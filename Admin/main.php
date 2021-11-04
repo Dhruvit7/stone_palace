@@ -20,7 +20,7 @@ $i1=0;
 			while($row=mysqli_fetch_assoc($res))
 			{
 				$i++;
-				$lastdate=$row['date'];
+				$lastdate=$row['username'];
 			}
 			$lastdate =(int)$date;
 			
