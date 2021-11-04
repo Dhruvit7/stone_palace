@@ -5,7 +5,7 @@ $name= $_POST['name'];
 $email= $_POST['email'];
 $pass= $_POST['pass'];
 
-$conn=mysqli_connect('localhost','root','','stone-palace');
+$conn=mysqli_connect('localhost','root','','stone_palace');
  
 
 $date =('j/m/Y');
