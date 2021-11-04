@@ -9,7 +9,7 @@ if(isset($_SESSION["username"]))
 ?>
 <html>
 <head>
-<title>stone-palaces |SignUp</title>
+<title>stone-palace |SignUp</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -127,8 +127,8 @@ if(isset($_SESSION["username"]))
     <div class="col-md-5 mx-auto my-4">
       <div class="card card-signup z-depth-0">
         <div class="card-body text-center">
-        <h2 style="border-bottom:1px solid black;">  Stone Palace</h2>
-          <h3 class="card-title">Create an account</h3>
+        <h2 style="border-bottom:1px solid #3E065F; color:#3E065F;">  Stone Palace</h2>
+          <h3 class="card-title" style="color:#3E065F;">Create an account</h3>
           <form action="savesignup.php" method="POST" id="signup">
           <div class="md-form mat-2" style="margin-top:10px;">
         	<label for="username">Username</label>
@@ -154,10 +154,10 @@ if(isset($_SESSION["username"]))
       	  </div>
           </form>
           <div class="card-foter text-right" style="margin-top:20px;">
-  		    <button type="button" class="btn btn-success" style="width:140px;" onclick="check()">Sign up</button>
+  		    <button type="button" class="btn" style="width:140px; background-color:#3E065F; color:#ffffff;" onclick="check()">Sign up</button>
           </div>
-		  <div class="card-foter"  style="margin-top:20px;border-top:1px solid aqua;font-size:large">
-  		    <a href="userlogin.php">Already have account?</a>
+		  <div class="card-foter"  style="margin-top:20px;border-top:1px solid #3E065F;font-size:large">
+  		    <a href="userlogin.php" style="color:#3E065F">Already have account?</a>
           </div>
         </div>
       </div>

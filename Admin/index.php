@@ -11,25 +11,18 @@ echo "<script>window.location.href = 'main.php';</script>";
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<!--js-->
 <script src="js/jquery-2.1.1.min.js"></script> 
-<!--icons-css-->
 <link href="css/font-awesome.css" rel="stylesheet"> 
-<!--Google Fonts-->
 <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-<!--static chart-->
 </head>
 <body>
 <script src='../../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script><script src="../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
-<div id="codefund"><!-- fallback content --></div>
+<div id="codefund"></div>
 <script src="../../../../../codefund.io/properties/441/funder.js" async="async"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src='https://www.googletagmanager.com/gtag/js?id=UA-149859901-1'></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -70,24 +63,22 @@ echo "<script>window.location.href = 'main.php';</script>";
 				<form method="POST" action="chklogin.php">
 					<input type="text" name="email" placeholder="Email" required >
 					<input type="password" name="password" class="lock" placeholder="Password" required >
-					<input type="submit" name="Sign In" value="Login">	
+					<input style="background-color:#3E065F; color:#ffffff" type="submit" name="Sign In" value="Login">	
 						
 				</form>
-				<h5><a href="../index.php">Go Back to Home</a></h5>
+				<h5><a href="../index.php" style="color:#3E065F">Go Back to Home</a></h5>
 			</div>
       </div>
 </div>
 
-<div class="copyrights" >
-	 <p>© 2019 . All Rights Reserved | Design by  ===== </p>
-</div>	
 
-<!--scrolling js-->
+
+
 		<script src="js/jquery.nicescroll.js"></script>
 		<script src="js/scripts.js"></script>
-		<!--//scrolling js-->
+	
 <script src="js/bootstrap.js"> </script>
-<!-- mother grid end here-->
+
 </body>
 
 </html>

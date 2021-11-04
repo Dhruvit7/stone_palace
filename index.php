@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('localhost','root','','stone_palace');
+$conn=mysqli_connect('localhost','root','','stone-palace');
 
 session_start();
 
@@ -117,7 +117,7 @@ body {
 <body>
 <div class="top " style="background-color:#fff;font-family:Eras Bold ITC;width:100%;text-align:center;background:#f14f78;color:#fff">
 </div>
- <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#201b1b;">
+ <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#3E065F;">
         <a href="#" class="navbar-brand">
            <h3 style="font-family:Trajan"><b><span style="font-size:30px;cursor:pointer;margin-right:2%;margin-left:2%" onclick="openNav()">&#9776;</span>
 		   <span onclick="window.location.assign('index.php')">Stone Palace</span>
@@ -196,13 +196,13 @@ else
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
   <div class="carousel-inner"  >
     <div class="carousel-item active">
-     <img class="d-block w-100" src="1.jpg" alt="First slide">
+     <img class="d-block w-100" src="home_img1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="2.jpg"  alt="Second slide">
+      <img class="d-block w-100" src="home_img2.jpg"  alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="3.jpg" alt="Third slide">
+      <img class="d-block w-100" src="home_img3.jpg" alt="Third slide">
     </div>
   </div>
 
@@ -268,7 +268,7 @@ else
 </div>
 </div>
 </div>
-<footer style="background:black;color:#ddd;margin-top:20px;"> 
+<footer style="background:#3E065F;color:#ddd;margin-top:20px;"> 
 <div class="card-footer" style="">
 
 <div class="container">
@@ -281,13 +281,13 @@ else
 	<div class="col-md-3" > 
 	
 		<h6 style="color:#fff;">Social Links</h6>
-<a href="#" class="fa fa-facebook btn btn-dark"></a>
-<a href="#" class="fa fa-twitter btn btn-dark"></a>
+<a href="#" class="fa fa-facebook btn" style="background-color:#8E05C2; color:#ffffff;"></a>
+<a href="#" class="fa fa-twitter btn" style="background-color:#8E05C2; color:#ffffff;"></a>
 	</div>
 <div class="col-md-3">
 
 </div>
-<div class="row " style="margin-top:30px;margin-bottom:30px;background:#201b1b;width:100%;">
+<div class="row " style="margin-top:30px;margin-bottom:30px;background:#8E05C2;width:100%;">
 	<div class="col-md-12 ">
 		<h2 style="text-align:center;"><img src='logo.jpg' height="90px" width="200px"></h2>
 	</div>
