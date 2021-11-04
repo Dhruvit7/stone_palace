@@ -19,7 +19,9 @@ $num_row = mysqli_num_rows($result);
 $row=mysqli_fetch_array($result);
 if( $num_row ==1 )
      {
- 		echo "<script>window.location.assign('main.php'); </script>";
+ $_SESSION['adminname']=$row['adminname'];
+ 
+		echo "<script>window.location.assign('main.php'); </script>";
 	}
  else
      {

@@ -55,22 +55,23 @@ echo "<script>window.location.href = 'main.php';</script>";
   <div id="w3lDemoBar" class="w3l-demo-bar" style="background:rgb(51, 122, 183);">
   
    
-    <span class="w3l-text" style ="font-size: x-large;color:white;padding-left:2%;"  > Admin Panel - StonePalace</span>
+    <span class="w3l-text" style ="font-size: x-large;color:white;padding-left:2%;"  > Stone-Palace Admin</span>
   
-</div>
+</div>    
 	
 <div class="login-page" style="margin-top:0px;padding-top:10px;background:#aef5c3  " >
 <!---728x90--->
 
     <div class="login-main" style="margin-top:0px;border-radius:12px;border-bottom:2px solid aqua;">  	
     	 <div class="login-head">
-				<h1>Login</h1>
+				<h1>Log-in</h1>
 			</div>			
 			<div class="login-block" >
 				<form method="POST" action="chklogin.php">
 					<input type="text" name="email" placeholder="Email" required >
 					<input type="password" name="password" class="lock" placeholder="Password" required >
-					<input type="submit" name="Sign In" value="Login">		
+					<input type="submit" name="Sign In" value="Login">	
+						
 				</form>
 				<h5><a href="../index.php">Go Back to Home</a></h5>
 			</div>

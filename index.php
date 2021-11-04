@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('localhost','root','','stone-palace');
+$conn=mysqli_connect('localhost','root','','stone_palace');
 
 session_start();
 
@@ -161,13 +161,34 @@ else
 	?>
 	<p style="width:80%;padding:20px;text-align:center;">Logged in as<small style="color:blue"> <?php echo $_SESSION["username"]; ?>
 </small></p>
-    <a href="" style="font-size:large;" ><h5><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart </h5></a>
-    <a href="" style="font-size:large;" ><h5><i class="fa fa-check"></i> My Order </h5></a>
-    <a href="" style="font-size:large;" ><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Logout </h5></a>
+    <a href="cart.php" style="font-size:large;" ><h5><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart </h5></a>
+    <a href="orders.php" style="font-size:large;" ><h5><i class="fa fa-check"></i> My Order </h5></a>
+    <a href="userlogout.php" style="font-size:large;" ><h5><i class="fa fa-sign-in" aria-hidden="true"></i> Logout </h5></a>
 	<?php
 }
 	?>
   <hr>
+  <h6 style="padding:5px;text-align:center;">Categories</h6>
+
+   <?php
+																			$qury= 'SELECT * FROM `maincategory`';
+																			$reslt=mysqli_query($conn,$qury);
+																		
+																						while($row=mysqli_fetch_assoc($reslt))
+																						{
+																							$name= $row['name'];
+																							$id=$row['id'];
+																							
+																							echo '
+																							<form action="category.php" method="POST" style="display:block;">
+																							<input type="text" value="'.$id.'" style="display:none;" name="idofcat">
+																							<input type="submit" value="'.$name.'" style="background:inherit" class="mybtn">
+																							</form>
+																							
+																							';
+																									
+																						}
+																						?>
   
   
 </div>
@@ -186,6 +207,63 @@ else
   </div>
 
 </div>
+<hr>
+ <br>
+ <div class="well">
+<h4 style="text-align:center;">All Categories</h4>
+<div class="col-md-12" >
+<div class="row justify-content-center" style="margin-top:10px;">
+<?php
+																			$qury= 'SELECT * FROM `maincategory`';
+																			$reslt=mysqli_query($conn,$qury);
+																						
+																			$reslt=mysqli_query($conn,$qury);
+																						while($row2=mysqli_fetch_assoc($reslt))
+																						{
+																							$name2= $row2['name'];
+																						
+																						$id2=$row2['id'];
+																						$query= 'SELECT * FROM `items`';
+																						$result=mysqli_query($conn,$query);
+																						while($row=mysqli_fetch_assoc($result))
+																						{
+																							$id=$row['id'];
+																							$cat=$row['category'];
+																							$image=$row['image'];
+																							if($row2['id']==$row['category'])
+																							{
+																								$categ=$name2;
+																								echo '
+																								<div class="col-md-4" style="">
+																								<div class="card catcard"style="  background-image: url('.$image.');
+																									  background-size:cover;
+																									  height:330px;
+																									  position:relative;
+																									  background-repeat: no-repeat;
+																									  background-color: #cccccc;" >
+																									<div class="card-header" style="background:white;font-size:x-large;font-family:Lucida Console">
+																										'.$categ.' 
+																									</div>	
+																							<div class="card-body"   >	
+																							
+																								 <form action="" method="POST" style="display:block;">
+																							<input type="text" value="'.$id2.'" style="display:none;" name="idofcat">
+																							<button type="submit" class="btn btn-secondary" id="seebtn" style="margin-top:20%;">see all <i class="fa fa-angle-double-right"></i></button>
+																							</form>	
+																						
+																							
+																									</div>
+																								</div>
+																								</div>
+																							
+																							';
+																							break;
+																							}
+																						}
+																							
+																					
+																						}
+?>
 
 </div>
 </div>
@@ -194,6 +272,7 @@ else
 <div class="card-footer" style="">
 
 <div class="container">
+
 <div class="col-md-12" >
 <div class="row justify-content-center" style="padding-top:10px;">
 <div class="col-md-3">

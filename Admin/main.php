@@ -17,10 +17,26 @@ $i1=0;
 		$res=mysqli_query($conn,$qur);
 		if($res)
 		{
-			$i1++;
+			while($row=mysqli_fetch_assoc($res))
+			{
+				$i++;
+				$lastdate=$row['date'];
+			}
+			$lastdate =(int)$date;
+			
+			while($row=mysqli_fetch_assoc($res))
+			{
+				
+				$chk=$row['date'];
+				$chk =(int)$chk;
+				if($chk==($lastdate-1)||$chk==$lastdate)
+				{
+					$i1++;
+				}
+			}
 		}
 		$i2=0;
-		$qur="SELECT * FROM `products`";
+		$qur="SELECT * FROM `items`";
 		$res=mysqli_query($conn,$qur);
 		if($res)
 		{
@@ -59,7 +75,7 @@ $i1=0;
 		<script src="croppie.js"></script>
 		<link rel="stylesheet" href="bootstrap.min.css" />
 		<link rel="stylesheet" href="croppie.css" />
-<title>Hashmi Fabrics</title>
+<title>Stone-Palace</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -76,18 +92,17 @@ $i1=0;
 <link href='http://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
 <!--static chart-->
 <script src="js/Chart.min.js"></script>
-<!--//charts-->
-<!-- geo chart -->
-    <script src="../../../../../cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script>window.modernizr || document.write('<script src="lib/modernizr/modernizr-custom.html"><\/script>')</script>
-    <!--<script src="lib/html5shiv/html5shiv.js"></script>-->
-     <!-- Chartinator  -->
-    <script src="js/chartinator.js" ></script>
+<script src="js/skycons.js"></script>
+<!--//skycons-icons-->
+</head>
+<body>
+<script src='../../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script><script src="../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 
-<meta name="robots" content="noindex">
-<body><link rel="stylesheet" href="../../../../images/demobar_w3_4thDec2019.css">
-	<!-- Demo bar start -->
-  	
+<script src="../../../../../codefund.io/properties/441/funder.js" async="async"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->	
+<!-- Demo bar start -->
+	
 <div class="page-container">	
    <div class="left-content">
 	   <div class="mother-grid-inner">
@@ -95,7 +110,7 @@ $i1=0;
 				<div class="header-main">
 					<div class="header">
 							<div class="logo-name">
-									 <a href="main.php"> <h1>Stone Palace</h1> 
+									 <a href="main.php"> <h1>Stone-Palace :: Admin Panel </h1> 
 									<!--<img id="logo" src="" alt="Logo"/>--> 
 								  </a> 								
 							</div>
@@ -163,7 +178,7 @@ $i1=0;
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-4 market-update-gd" onclick="goproduct()">
+			<div class="col-md-4 market-update-gd" onclick="">
 				<div class="market-update-block clr-block-3">
 					<div class="col-md-8 market-update-left">
 						<h3><?php  echo $i2 ; ?></h3>
@@ -179,65 +194,7 @@ $i1=0;
 		   <div class="clearfix"> </div>
 		</div>
 
-<!---728x90--->
-
-<!--main page chart start here-->
-<!--main page chart layer2-->
-<div class="chart-layer-2">
-	
-	<div class="col-md-6 chart-layer2-right">
-			<div class="prograc-blocks">
-		     <!--Progress bars-->
-	        <div class="home-progres-main">
-	           <h3>Total Sales</h3>
-	         </div>
-	        <div class='bar_group'>
-					<div class='bar_group__bar thin' label='Rating' show_values='true' tooltip='true' value='343'></div>
-					<div class='bar_group__bar thin' label='Quality' show_values='true' tooltip='true' value='235'></div>
-					<div class='bar_group__bar thin' label='Amount' show_values='true' tooltip='true' value='550'></div>
-					<div class='bar_group__bar thin' label='Farming' show_values='true' tooltip='true' value='456'></div>
-		    </div>
-				<script src="js/bars.js"></script>
-
-	      <!--//Progress bars-->
-	      </div>
-	</div>
-	<div class="col-md-6 chart-layer2-left">
-		<div class="content-main revenue" >			
-					<h3>Total Revenue</h3>
-					<canvas id="radar" height="300" width="300" style="width: 300px; height: 300px;"></canvas>
-						<script>
-							var radarChartData = {
-								labels : ["","","","","","",""],
-								datasets : [
-									{
-										fillColor : "rgba(104, 174, 0, 0.83)",
-										strokeColor : "#68ae00",
-										pointColor : "#68ae00",
-										pointStrokeColor : "#fff",
-										data : [65,59,90,81,56,55,40]
-									},
-									{
-										fillColor : "rgba(236, 133, 38, 0.82)",
-										strokeColor : "#ec8526",
-										pointColor : "#ec8526",
-										pointStrokeColor : "#fff",
-										data : [28,48,40,19,96,27,100]
-									}
-								]
-								
-							};
-							new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
-						</script>
-		</div>
-	</div>
-  <div class="clearfix"> </div>
 </div>
-</div>
-
-<!--inner block end here-->
-<!---728x90--->
-
 <!------------------------------------------------------new product--------------------->
 
 <div class="col-md-12" id='newproduct' style='display :none;width:100%;'>
@@ -382,57 +339,7 @@ $(document).ready(function(){
 </div>
 <!--------------------end sub category-->
 <!--------------------order-->
-<div id="orders">
 
-<div class="col-md-12"  style='width:100%;'>
-
-  <div class="card-header" >
-   
-   <h2 style="align:center">Search payment by Transaction_id OR transaction date(mm/dd/yy).</h2><br />
-   <div class="form-group">
-    <div class="input-group">
-     <span class="input-group-addon">Search</span>
-     <input type="text" name="search_text" id="search_text2" placeholder="Search by Customer Details" class="form-control" />
-    </div>
-   </div>
-   <br />
-   <div class="well" id="result2"></div>
-  </div>
-  
-</div>
-
-<script>
-$(document).ready(function(){
-
- load_data();
-
- function load_data(query)
- {
-  $.ajax({
-   url:"fetchorders.php",
-   method:"POST",
-   data:{query:query},
-   success:function(data)
-   {
-    $('#result2').html(data);
-   }
-  });
- }
- $('#search_text2').keyup(function(){
-  var search2 = $(this).val();
-  if(search2 != '')
-  {
-   load_data(search2);
-  }
-  else
-  {
-   load_data();
-  }
- });
-});
-</script>
-
-</div>
 
 <!--------------------end orderss-->
 </div>
@@ -555,8 +462,8 @@ $(document).ready(function(){
 		       
 		         <li><a href="#" onclick="gomaincategory()"><i class="fa fa-plus-square-o"></i><span>Add main</span></a></li>
 		         <li><a href="#" onclick="gosubcategory()"><i class="fa fa-plus"></i><span>Add product</span></a></li>
-		         <li><a href="#" onclick="goproduct()"><i class="fa fa-shopping-cart"></i><span>Items</span></a></li>
-		         <li><a href="#" onclick="makeorders()"><i class="fa fa-truck"></i><span>Orders</span></a></li>
+		         <li><a href="#" onclick=""><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
+		         <li><a href="#" onclick=""><i class="fa fa-truck"></i><span>Orders</span></a></li>
 		         <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
 		      </ul>
 		    </div>
@@ -590,10 +497,7 @@ $(".sidebar-icon").click(function() {
 <script src="js/bootstrap.js"> </script>
 <!-- mother grid end here-->
 <!--copy rights start here-->
-<div class="copyrights">
-	 <p>© 2019. All Rights Reserved </p>
-</div>	
-<!--COPY rights end here-->
+
 </body>
 
 </html>                     
