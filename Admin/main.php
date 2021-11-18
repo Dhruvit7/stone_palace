@@ -337,7 +337,6 @@ $(document).ready(function(){
 				
 </div>
 </div>
-<!--------------------end sub category-->
 <!--------------------order-->
 
 
@@ -462,7 +461,7 @@ $(document).ready(function(){
 		       
 		         <li><a href="#" onclick="gomaincategory()"><i class="fa fa-plus-square-o"></i><span>Add main</span></a></li>
 		         <li><a href="#" onclick="gosubcategory()"><i class="fa fa-plus"></i><span>Add product</span></a></li>
-		         <li><a href="#" onclick=""><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
+		         <li><a href="#" onclick="goproduct()"><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
 		         <li><a href="#" onclick=""><i class="fa fa-truck"></i><span>Orders</span></a></li>
 		         <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
 		      </ul>
