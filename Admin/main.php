@@ -79,7 +79,6 @@ $i1=0;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
@@ -180,7 +179,7 @@ $i1=0;
 			</div>
 			<div class="col-md-4 market-update-gd" onclick="">
 				<div class="market-update-block clr-block-3">
-					<div class="col-md-8 market-update-left">
+					<div onclick="goproduct()" class="col-md-8 market-update-left">
 						<h3><?php  echo $i2 ; ?></h3>
 						<h4>Total </h4>
 						<p>Products</p>
@@ -462,6 +461,7 @@ $(document).ready(function(){
 		         <li><a href="#" onclick="gomaincategory()"><i class="fa fa-plus-square-o"></i><span>Add main</span></a></li>
 		         <li><a href="#" onclick="gosubcategory()"><i class="fa fa-plus"></i><span>Add product</span></a></li>
 		         <li><a href="#" onclick="goproduct()"><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
+				 <li><a href="#"><i class="fa fa-user"></i><span>Manage Users</span></a></li>
 		         <li><a href="#" onclick=""><i class="fa fa-truck"></i><span>Orders</span></a></li>
 		         <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
 		      </ul>
