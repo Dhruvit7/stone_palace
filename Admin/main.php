@@ -166,11 +166,13 @@ $i1=0;
 	 <div class="market-updates">
 			<div class="col-md-4 market-update-gd">
 				<div class="market-update-block clr-block-1">
+					<a href="user.php">
 					<div class="col-md-8 market-update-left">
 						<h3><?php echo $i; ?></h3>
 						<h4>Registered Users</h4>
 						<p>total</p>
 					</div>
+	</a>
 					<div class="col-md-4 market-update-right">
 						<i class="fa fa-file-text-o"> </i>
 					</div>
