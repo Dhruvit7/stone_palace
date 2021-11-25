@@ -157,6 +157,7 @@ body {
         <a href="#" class="navbar-brand">
            <h3 style="font-family:Trajan"><b><span style="font-size:30px;cursor:pointer;margin-right:2%;margin-left:2%" onclick="openNav()">&#9776;</span>
 		   <span onclick="window.location.assign('index.php')">Stone Palace</span>
+
 </b></h3>
         </a>
       
@@ -232,7 +233,7 @@ else
   
 </div>
 
-<h6 style="text-align:center;width:100%;border-top:1px solid aqua;border-bottom:1px solid aqua;" class="card-header" >Categories / <?php echo $categoryname; ?> Collection</h6>
+<h6 style="text-align:center;width:100%;border-top:1px solid;border-bottom:1px solid;" class="card-header" >Categories / <?php echo $categoryname; ?> Collection</h6>
 <div class="col-md-12"  style="font-family:Bauhaus">
 <div class="row justify-content-center" style="margin-top:10px;">
 	<?php
@@ -271,11 +272,11 @@ else
 																							  <div class="well">
 																							  <h5>'.$name.'</h5>
 																								<p style="width:100%;"> <span style="float:right">Stock '.$stock.'</span></p>
-																								<br><p style="width:100%;color:red;font-family:verdana;font-size:x-large"> <span style="float:right">Price '.$price.' <small >$ CAD</small></span></p>
+																								<br><p style="width:100%;color:black; background color: #3E065F;font-family:verdana;font-size:x-large"> <span style="float:right">Price '.$price.' <small >$ CAD</small></span></p>
 																									</div>	
 																							<form action="detailitems.php" method="POST" style="display:block;">
 																							<input type="text" value="'.$id.'" style="display:none;" name="id">
-																							<input type="submit" class="btn btn-primary" value="shop now" style="width:100%;text-align:center;" >
+																							<input type="submit" class="btn"   value="shop now" style="width:100%;text-align:center; color:white; background-color:#3E065F;" >
 																							</form>	
 																							
 																									</div>

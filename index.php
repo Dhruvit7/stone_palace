@@ -246,7 +246,7 @@ else
 																									</div>	
 																							<div class="card-body"   >	
 																							
-																								 <form action="" method="POST" style="display:block;">
+																								 <form action="category.php" method="POST" style="display:block;">
 																							<input type="text" value="'.$id2.'" style="display:none;" name="idofcat">
 																							<button type="submit" class="btn btn-secondary" id="seebtn" style="margin-top:20%;">see all <i class="fa fa-angle-double-right"></i></button>
 																							</form>	

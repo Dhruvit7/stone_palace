@@ -22,7 +22,7 @@ $chk=0;
  }
  if($chk==0)
  {
- $insert="INSERT INTO `users`(`username`, `email`, `pass`, `date`) VALUES ('$name','$email','$pass','$date')";
+ $insert="INSERT INTO `users`(`username`, `email`, `pass`) VALUES ('$name','$email','$pass')";
  $res=mysqli_query($conn,$insert);
 
 			$_SESSION["username"] = $email;
