@@ -602,12 +602,11 @@ $(document).ready(function(){
 		         <li><a href="#" onclick="gomaincategory()"><i class="fa fa-plus-square-o"></i><span>Add main</span></a></li>
 		         <li><a href="#" onclick="gosubcategory()"><i class="fa fa-plus"></i><span>Add product</span></a></li>
 		         <li><a href="#" onclick="goproduct()"><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
-<<<<<<< HEAD
+
 		         <li><a href="#" onclick="u()"><i class="fa fa-truck"></i><span>Orders</span></a></li>
-=======
+
 				 <li><a href="#" onclick="manageusers()"><i class="fa fa-user"></i><span>Manage Users</span></a></li>
 		         <li><a href="#" onclick=""><i class="fa fa-truck"></i><span>Orders</span></a></li>
->>>>>>> 3d0bcf69cbc7719b62499e348fcc711cc5c798cb
 		         <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
 		      </ul>
 		    </div>
