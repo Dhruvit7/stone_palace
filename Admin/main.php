@@ -337,6 +337,54 @@ $(document).ready(function(){
 				
 </div>
 </div>
+<div class="col-md-12" id='user' style='display :none;width:100%;'>
+
+  <div class="card-header" >
+   
+   <h2 style="align:center">Search your product</h2><br />
+   <div class="form-group">
+    <div class="input-group">
+     <span class="input-group-addon">Search</span>
+     <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+    </div>
+   </div>
+   <br />
+   <div class="well" id="result"></div>
+  </div>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+
+ load_data();
+
+ function load_data(query)
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{query:query},
+   success:function(data)
+   {
+    $('#result').html(data);
+   }
+  });
+ }
+ $('#search_text').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+   load_data(search);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+});
+</script>
+
 <!--------------------order-->
 
 
@@ -350,6 +398,7 @@ $(document).ready(function(){
 		var c=document.getElementById('addmaincategory');
 		var d=document.getElementById('addsubcategory');
 		var e=document.getElementById('orders');
+		var f=document.getElementById('user');
 		
 		if(b.style.display!='none')
 		{
@@ -358,6 +407,7 @@ $(document).ready(function(){
 			c.style.display='none';
 			d.style.display='none';
 			e.style.display='none';
+			f.style.display='none';
 		}
 		else
 		{
@@ -366,6 +416,7 @@ $(document).ready(function(){
 			c.style.display='none';
 			d.style.display='none';
 			e.style.display='none';
+			f.style.display='none';
 		}
 		
 	}
@@ -377,6 +428,7 @@ $(document).ready(function(){
 		
 		var d=document.getElementById('addsubcategory');
 		var e=document.getElementById('orders');
+		var f=document.getElementById('user');
 		if(b.style.display!='none')
 		{
 			b.style.display='none';
@@ -384,6 +436,7 @@ $(document).ready(function(){
 			c.style.display='block';
 			d.style.display='none';
 			e.style.display='none';
+			f.style.display='none';
 		}
 		else
 		{
@@ -392,6 +445,7 @@ $(document).ready(function(){
 			c.style.display='block';
 			d.style.display='none';
 			e.style.display='none';
+			f.style.display='none';
 		}
 	}
 	function gosubcategory()
@@ -402,6 +456,7 @@ $(document).ready(function(){
 		
 		var d=document.getElementById('addsubcategory');
 		var e=document.getElementById('orders');
+		var f=document.getElementById('user');
 		if(b.style.display!='none')
 		{
 			b.style.display='none';
@@ -409,6 +464,7 @@ $(document).ready(function(){
 			d.style.display='block';
 			c.style.display='none';
 			e.style.display='none';
+			f.style.display='none';
 		}
 		else
 		{
@@ -417,6 +473,7 @@ $(document).ready(function(){
 			d.style.display='block';
 			c.style.display='none';
 			e.style.display='none';
+			f.style.display='';
 		}
 	}
 	function makeorders()
@@ -427,6 +484,7 @@ $(document).ready(function(){
 		
 		var d=document.getElementById('addsubcategory');
 		var e=document.getElementById('orders');
+		var f=document.getElementById('user');
 		if(b.style.display!='none')
 		{
 			b.style.display='none';
@@ -434,6 +492,7 @@ $(document).ready(function(){
 			d.style.display='none';
 			c.style.display='none';
 			e.style.display='block';
+			f.style.display='block';
 		}
 		else
 		{
@@ -442,8 +501,39 @@ $(document).ready(function(){
 			d.style.display='none';
 			c.style.display='none';
 			e.style.display='block';
+			f.style.display='block';
 		}
 	}
+	function u()
+	{
+		var a=document.getElementById('newproduct');
+		var b=document.getElementById('dashboard');
+		var c=document.getElementById('addmaincategory');
+		
+		var d=document.getElementById('addsubcategory');
+		var e=document.getElementById('orders');
+		var f=document.getElementById('user');
+		if(b.style.display!='none')
+		{
+			b.style.display='none';
+			a.style.display='none';
+			d.style.display='none';
+			c.style.display='none';
+			e.style.display='none';
+			f.style.display='block';
+		}
+		else
+		{
+		b.style.display='none';
+			a.style.display='none';
+			d.style.display='none';
+			c.style.display='none';
+			e.style.display='none';
+			e.style.display='none';
+			f.style.display='block';
+		}
+	}
+	
 	
 </script>
 
@@ -462,7 +552,7 @@ $(document).ready(function(){
 		         <li><a href="#" onclick="gomaincategory()"><i class="fa fa-plus-square-o"></i><span>Add main</span></a></li>
 		         <li><a href="#" onclick="gosubcategory()"><i class="fa fa-plus"></i><span>Add product</span></a></li>
 		         <li><a href="#" onclick="goproduct()"><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
-		         <li><a href="#" onclick=""><i class="fa fa-truck"></i><span>Orders</span></a></li>
+		         <li><a href="#" onclick="u()"><i class="fa fa-truck"></i><span>Orders</span></a></li>
 		         <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
 		      </ul>
 		    </div>
