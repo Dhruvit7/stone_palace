@@ -243,13 +243,61 @@ $(document).ready(function(){
  });
 });
 </script>
+<div class="col-md-12" id='manageuser' style='display :none;width:100%;'>
+
+  <div class="card-header" >
+   
+   <h2 style="align:center">Search your product</h2><br />
+   <div class="form-group">
+    <div class="input-group">
+     <span class="input-group-addon">Search</span>
+     <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+    </div>
+   </div>
+   <br />
+   <div class="well" id="result"></div>
+  </div>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+
+ load_data();
+
+ function load_data(query)
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{query:query},
+   success:function(data)
+   {
+    $('#result').html(data);
+   }
+  });
+ }
+ $('#search_text').keyup(function(){
+  var search = $(this).val();
+  if(search != '')
+  {
+   load_data(search);
+  }
+  else
+  {
+   load_data();
+  }
+ });
+});
+</script>
+
 <!------------------------------------------------------end new product--------------------->
 <!-------------------sub category--->
 <div class="col-md-12" id='addmaincategory' style='display :none;width:100%;'>
 <h4 style="text-align:center;">Add main category only.</h4>
 
 <form class="form" action="savemaincategory.php" method="POST">
-<div class=""  style="border:1px solid aqua;border-radius:10px;margin-top:10px;margin-bottom:5px;padding:10px;">
+<div class=""  style="border:1px solid ;border-radius:10px;margin-top:10px;margin-bottom:5px;padding:10px;">
 		<div class="card mb-3" >
   <div class="no-gutters">
   
@@ -436,18 +484,21 @@ $(document).ready(function(){
 		}
 		else
 		{
-		b.style.display='none';
+			b.style.display='none';
 			a.style.display='none';
 			d.style.display='none';
 			c.style.display='none';
 			e.style.display='block';
 		}
 	}
+
 	
 </script>
 
 </div>
 </div>
+
+
 <!--slider menu-->
     <div class="sidebar-menu" style="height:100%;">
 		  	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" ></span> 
@@ -461,7 +512,7 @@ $(document).ready(function(){
 		         <li><a href="#" onclick="gomaincategory()"><i class="fa fa-plus-square-o"></i><span>Add main</span></a></li>
 		         <li><a href="#" onclick="gosubcategory()"><i class="fa fa-plus"></i><span>Add product</span></a></li>
 		         <li><a href="#" onclick="goproduct()"><i class="fa fa-shopping-cart"></i><span>Inventory</span></a></li>
-				 <li><a href="#"><i class="fa fa-user"></i><span>Manage Users</span></a></li>
+				 <li><a href="#" onclick="manageusers()"><i class="fa fa-user"></i><span>Manage Users</span></a></li>
 		         <li><a href="#" onclick=""><i class="fa fa-truck"></i><span>Orders</span></a></li>
 		         <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
 		      </ul>
