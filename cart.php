@@ -159,21 +159,21 @@ body {
 	text-align:center;
 }
 .delcart:hover{
-	border:1px solid aqua;
+	border:1px solid #000000;
 }
 </style>
 </head>
 <body>
-<div class="top " style="background-color:#fff;font-family:Eras Bold ITC;width:100%;text-align:center;background:#f14f78;color:#fff">
+<div class="top " style="background-color:#fff;font-family:Eras Bold ITC;width:100%;text-align:center;background:#000000;color:#fff">
 <div class="container"><b>
-<span style="text-align:center;"><i class="fa fa-car" aria-hidden="true" style="padding:0px;margin:0px;"></i>Free delievery over 3000rs purchase.</span>
+
 </b>
 </div>
 </div>
- <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#201b1b;">
+ <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#3E065F;">
         <a href="#" class="navbar-brand">
            <h3 style="font-family:Trajan"><b><span style="font-size:30px;cursor:pointer;margin-right:2%;margin-left:2%" onclick="openNav()">&#9776;</span>
-		   <span onclick="window.location.assign('index.php')">HashmiFabrics</span>
+		   <span onclick="window.location.assign('index.php')">Stone Palace</span>
 </b></h3>
         </a>
       
@@ -243,13 +243,13 @@ else
   
 </div>
 
-<h2 style="text-align:center;width:100%;border-top:1px solid aqua;border-bottom:1px solid aqua;margin-bottom:5px;" class="card-header" ><i class="fa fa-shopping-cart" style="font-size:x-large;" aria-hidden="true"></i> cart </h2>
+<h2 style="text-align:center;width:100%;border-top:1px solid black;border-bottom:1px solid black;margin-bottom:5px;" class="card-header" ><i class="fa fa-shopping-cart" style="font-size:x-large;" aria-hidden="true"></i> cart </h2>
 
  <div class=" col-md-12">
 <div class="row" style="width:100%;margin:0%">
 
 <div class="col-md-5" style="text-align:end;">
-	<h2 style="color:red;text-align:end;"><b>Total :<?php echo $money; ?><small style="font-family:verdana;font-size:small">CAD</small></b></h2>
+	<h2 style="color:#3E065F;text-align:end;"><b>Total :<?php echo $money; ?><small style="font-family:verdana;font-size:small">CAD</small></b></h2>
 	<span style="text-align:end;">There are <?php echo $couteritems; ?> package.</span>
 	<?php
 	
@@ -282,7 +282,7 @@ $query1="SELECT * FROM `users`";
 		<small class="card-header">Please save your information before order.</small>
 		<textarea class="form-control" name="locate" rows="3" placeholder="Enter location here " required style="margin-top:2px;"></textarea>
 		<input type="text" name="phone" class="form-control" placeholder="Enter phone number here " required style="margin-top:2px;">
-		<input type="submit" class="btn btn-outline-primary card-footer" value="save" style="margin:2px;">
+		<input type="submit" class="btn  card-footer" value="save" style="margin:2px; background-color:#3E065F; color:#ffffff;">
 		</form>
 		</div>
 		';
@@ -299,17 +299,17 @@ $query1="SELECT * FROM `users`";
 	
 	<form action="saveorder.php" method="POST">
 	<div class="card" >
-	<div class="card-header">Send <u>easypaisa</u> <b style="color:red;"><?php echo $money; ?> <small>CAD</small> </b> to <b style="font-size:large">033312123</b> and fill this form to make order.</div>
+	
 	<div class="card-body">
-	<label style="text-align:start"> Transaction id.</label>
-	<input type="text" class="form-control" Placeholder="Enter transaction id.." name="trans_id" required>
+	<label style="text-align:start"> Card No.:</label>
+	<input type="text" class="form-control" Placeholder="Enter card no.:" name="trans_id" required>
 	
 	<label style="text-align:start">Date when you make transaction.</label>
 	<input type="date" class="form-control" name="trans_date" required>
 	</div>
 	</div>
 	<br>
-	<input type="submit" style="text-align:center;width:100%;font-size:x-large;border-radius:1%;" class="btn btn-success" value="Order now">
+	<input type="submit" style="text-align:center;width:100%;font-size:x-large;border-radius:1%; background-color:#3E065F; color:#ffffff;" class="btn " value="Order now">
 	</form>
 	<?php
 	}
@@ -348,13 +348,13 @@ $query1="SELECT * FROM `users`";
 							echo '<hr>
 								<div class="row justify-content-center" style="width:100%;margin-top:0%;margin-bottom:0%;">
 								<div class="col-md-3">
-										<img class="d-block w-100"  height="150px;" src="hashmi/'.$row2['image'].'" alt="image">
+										<img class="d-block w-100"  height="150px;" src="Admin/'.$row2['image'].'" alt="image">
 									</div>
 									<div class="col-md-8" style="padding-top:5px;">
 										<form action="deletecart.php" method="POST" style="display:block;float:right">
 											<div class="" style="margin-bottom:10px;">
 											<input type="text" name="cartid" value="'.$row["id"].'" style="display:none;">
-											<small ><input type="submit" class="btn delcart link card-footer" value="Drop it from cart" style="border-top:1px solid aqua;border-bottom:1px solid aqua;color:red;">
+											<small ><input type="submit" class="btn delcart link card-footer" value="Drop it from cart" style="border-top:1px solid black;border-bottom:1px solid black;color:#3E065F;">
 											</small>
 											
 											</div>
@@ -369,7 +369,7 @@ $query1="SELECT * FROM `users`";
 										<p>'.$row2['description'].'
 										<br>Quantity : '.$row['quantity'].'
 										</p>
-										<h5 style="color:red;">1 item price '.$row2['price'].'<small style="font-family:verdana;font-size:small">pkr</small></h5>
+										<h5 style="color:#3E065F;">1 item price '.$row2['price'].'<small style="font-family:verdana;font-size:small">pkr</small></h5>
 									</div>
 								</div>
 							
@@ -386,80 +386,43 @@ $query1="SELECT * FROM `users`";
 </div>
 </div>
 </div>
-<footer style="background:black;color:#ddd;margin-top:20px;width:100%;"> 
+<footer style="background:#3E065F;color:#ddd;margin-top:20px;"> 
 <div class="card-footer" style="">
 
 <div class="container">
+
 <div class="col-md-12" >
-<div class="row justify-content-center" style="padding-top:10px;margin:0%;">
+<div class="row justify-content-center" style="padding-top:10px;">
 <div class="col-md-3">
-
-	<div class="" >
-		<h6 style="color:#fff;">HASHMI FABRICS</h6>
-		
-
-   <?php
-																			$qury= 'SELECT * FROM `maincategory`';
-																			$reslt=mysqli_query($conn,$qury);
-																		
-																						while($row=mysqli_fetch_assoc($reslt))
-																						{
-																							$name= $row['name'];
-																							$id=$row['id'];
-																							
-																							echo '
-																							<form action="category.php" method="POST" style="display:block;">
-																							<input type="text" value="'.$id.'" style="display:none;" name="idofcat">
-																							<input type="submit" value="'.$name.'" style="background:inherit;color:#b0ababcc;border:0xp;text-align:strart" class="mybtn">
-																							</form>
-																							
-																							';
-																									
-																						}
-																						?>
-		
+<div >
+	<h6 style="color:#fff;">Address</h6>
+		<small style="color:#ffffff">Stone Palace<br>
+		Montreal<br>
+		Canada</small>
 	</div>
-	
-
 </div>
 	<div class="col-md-3" > 
 	
 		<h6 style="color:#fff;">Social Links</h6>
-<a href="#" class="fa fa-facebook btn btn-dark"></a>
-<a href="#" class="fa fa-twitter btn btn-dark"></a>
+<a href="#" class="fa fa-facebook btn" style="background-color:#8E05C2; color:#ffffff;"></a>
+<a href="#" class="fa fa-twitter btn" style="background-color:#8E05C2; color:#ffffff;"></a>
 	</div>
-<div class="col-md-3">
-
-<div class="">
-	<div >
-	<h6 style="color:#fff;">Address</h6>
-		<small style="color:#b0ababcc">Pakistan cloth house<br>
-		near Boar chowk,Dinga<br>
-		Gujrat, Pakistan</small>
-	</div>
-	
-	
-	</div>
-</div>
 <div class="col-md-3">
 <div >
 	<h6 ><a href="#" style="color:#fff;">Contacts</a></h6>
-	<small style="color:#b0ababcc">T: +92-333-3333333<br>
-		Emal: mymail@mail.com<br>
+	<small style="color:#ffffff">T: +1<br>
+		Email: stonepalace@gmail.com<br>
 		</small>
 	</div>
 </div>
 </div>
-</div>
-<div class="row " style="margin-top:30px;margin-bottom:30px;background:#201b1b;width:100%;">
+<div class="row " style="margin-top:30px;margin-bottom:30px;background:#8E05C2;width:100%;">
 	<div class="col-md-12 ">
 		<h2 style="text-align:center;"><img src='logo.jpg' height="90px" width="200px"></h2>
 	</div>
 </div>
 </div>
-
 </div>
-
 </footer>
 <script>
 function openNav() {

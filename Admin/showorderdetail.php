@@ -134,12 +134,12 @@ body {
 }
 </style>
 <body>
- <nav class="navbar navbar-expand navbar-dark bg-dark">
+ <nav class="navbar navbar-expand navbar-dark" style="background:#3E065F;">
        
 
         <div class="collapse navbar-collapse" id="navbarCollapse1">
-           <a href="main.php" class="btn btn-light" style="float:left;" >back</a>
-            <h4 style="float:right;margin-left:3%; color:white;">Hashmi Fabrics |Parcel order and click on parcelled.</h4>
+           
+            <h4 style="float:right;margin-left:3%; color:white;">Stone Palace</h4>
         </div>
     </nav>
 	
@@ -213,7 +213,7 @@ $query="SELECT * FROM `orderitem` ORDER BY id DESC";
 										<p>'.$row2['description'].'
 										<br>Quantity : '.$row1['quantity'].'
 										</p>
-										<h5 style="color:red;">1 item price '.$row2['price'].'<small style="font-family:verdana;font-size:small">pkr</small></h5>
+										<h5 style="color:#3E065F;">1 item price '.$row2['price'].'<small style="font-family:verdana;font-size:small">pkr</small></h5>
 									</div>
 								</div>
 							

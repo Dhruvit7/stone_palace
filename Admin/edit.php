@@ -72,11 +72,11 @@ $conn=mysqli_connect('localhost','root','','stone_palace');
 
 	</head>
 <body>
- <nav class="navbar navbar-expand navbar-dark bg-dark">
+ <nav class="navbar navbar-expand navbar-dark" style="background-color:#3E065F;">
        
 
         <div class="collapse navbar-collapse" id="navbarCollapse1">
-            <h4 style="float:right;margin-left:3%; color:white;">Stone Palace</h4>
+            <h4 style="float:right;margin-left:3%; color:white; ">Stone Palace</h4>
         </div>
     </nav>
 <form class="form" action="saveinfo.php" method="POST">
@@ -94,7 +94,7 @@ $conn=mysqli_connect('localhost','root','','stone_palace');
         <h2 class="card-title">
 		<input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
 		</h2>
-		<h5 style="border-bottom:1px solid aqua;">Description</h5>
+		<h5 >Description</h5>
         <input type="text" class="form-control" class="card-text" name="description" value="<?php echo $desc; ?>" />
 		
 		</div>
@@ -103,18 +103,18 @@ $conn=mysqli_connect('localhost','root','','stone_palace');
   </div>
 </div>
 <div>
-<div class="card border-success mb-3" style="max-width: 50%;float:left;">
-  <div class="card-header" style="float:left;"><h5 style="border-bottom:1px solid aqua;text-align:center;">Cost</h5> <h3  style="float:right;display:inline-block;"><input name="cost" style="width:100%" value="<?php echo $price; ?>"></h3></div>
+<div class="card border-dark mb-3" style="max-width: 50%;float:left;">
+  <div class="card-header" style="float:left;"><h5 style="text-align:center;">Cost</h5> <h3  style="float:right;display:inline-block;"><input name="cost" style="width:100%" value="<?php echo $price; ?>"></h3></div>
 </div style="margin-top:10px;">
 
-<div class="card border-primary mb-3" style="max-width: 50%;float:right;">
-  <div class="card-header" style="float:left;"><h5 style="border-bottom:1px solid aqua;text-align:center;">Stock</h5> <h3  style="float:right;display:inline-block;"><input name="stock" style="width:100%" value="<?php echo $stock; ?>"></h3></div>
+<div class="card border-dark mb-3" style="max-width: 50%;float:right;">
+  <div class="card-header" style="float:left;"><h5 style="text-align:center;">Stock</h5> <h3  style="float:right;display:inline-block;"><input name="stock" style="width:100%" value="<?php echo $stock; ?>"></h3></div>
 </div>
-<div class="card border-success mb-3" style="max-width: 50%;float:left;">
-  <div class="card-header" style="float:left;"><h5 style="border-bottom:1px solid aqua;text-align:center;">Weight</h5> <h3  style="float:right;display:inline-block;"><input name="weight" style="width:100%" value="<?php echo $weight; ?>"></h3></div>
+<div class="card border-dark mb-3" style="max-width: 50%;float:left;">
+  <div class="card-header" style="float:left;"><h5 style="text-align:center;">Weight</h5> <h3  style="float:right;display:inline-block;"><input name="weight" style="width:100%" value="<?php echo $weight; ?>"></h3></div>
 </div>
-<div class="card border-primary  mb-3" style="max-width: 50%;float:right;">
-  <div class="card-header" style="float:left;"><h5 style="border-bottom:1px solid aqua;text-align:center;">Category</h5> <h3  style="float:right;display:inline-block;"><input disabled style="width:100%" value="<?php echo $cat; ?>"></h3></div>
+<div class="card border-dark  mb-3" style="max-width: 50%;float:right;">
+  <div class="card-header" style="float:left;"><h5 style="text-align:center;">Category</h5> <h3  style="float:right;display:inline-block;"><input disabled style="width:100%" value="<?php echo $cat; ?>"></h3></div>
 </div>
 
 
@@ -132,9 +132,9 @@ $conn=mysqli_connect('localhost','root','','stone_palace');
 				<div class="modal-content" style="display:inline-block;padding:20px;">
 					<form  action="delete.php" method="POST">
 					<input type="text" name="id" value="<?php echo $id; ?>" style="display:none;" />
-					<h4 style="color:red;text-align:center;display:block;padding-bottom:5px;border-bottom:1px solid aqua;">Are you sure !!!</h4>
-					<button class="btn btn-primary" data-dismiss="modal" type="button" style="float:left;width:40%;display:inline-block;" >NO</button>
-					<input type="submit" style="float:right;width:40%;display:inline-block;" class="pic btn btn-outline-success" value="Yes" >
+					<h4 style="color:#000000;text-align:center;display:block;padding-bottom:5px;border-bottom:1px solid #000000;">Are you sure !!!</h4>
+					<button class="btn border-dark" data-dismiss="modal" type="button" style="float:left;width:40%;display:inline-block;" >NO</button>
+					<input type="submit" style="float:right;width:40%;display:inline-block;" class="pic btn btn-outline-dark" value="Yes" >
 					</form>
 				</div>
 			</div>

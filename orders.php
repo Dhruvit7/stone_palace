@@ -130,14 +130,13 @@ body {
 <body>
 <div class="top " style="background-color:#fff;font-family:Eras Bold ITC;width:100%;text-align:center;background:#f14f78;color:#fff">
 <div class="container"><b>
-<span style="text-align:center;"><i class="fa fa-car" aria-hidden="true" style="padding:0px;margin:0px;"></i>Free delievery over 3000rs purchase.</span>
 </b>
 </div>
 </div>
- <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#201b1b;">
+ <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#3E065F;">
         <a href="#" class="navbar-brand">
            <h3 style="font-family:Trajan"><b><span style="font-size:30px;cursor:pointer;margin-right:2%;margin-left:2%" onclick="openNav()">&#9776;</span>
-		   <span onclick="window.location.assign('index.php')">HashmiFabrics</span>
+		   <span onclick="window.location.assign('index.php')">Stone Palace</span>
 </b></h3>
         </a>
       
@@ -207,7 +206,7 @@ else
   
 </div>
 
-<h2 style="text-align:center;width:100%;border-top:1px solid aqua;border-bottom:1px solid aqua;margin-bottom:5px;" class="card-header" ><i class="fa fa-shopping-cart" style="font-size:x-large;" aria-hidden="true"></i> orders </h2>
+<h2 style="text-align:center;width:100%;border-top:1px solid #000000;border-bottom:1px solid #000000;margin-bottom:5px;" class="card-header" ><i class="fa fa-shopping-cart" style="font-size:x-large;" aria-hidden="true"></i> orders </h2>
 
  <div class=" col-md-12">
 <div class="row" style="width:100%;margin:0%">
@@ -259,7 +258,7 @@ $query="SELECT * FROM `orderitem` ORDER BY id DESC";
 							echo '<hr>
 								<div class="row justify-content-center" style="width:100%;margin-top:0%;margin-bottom:0%;padding:10px">
 								<div class="col-md-3">
-										<img class="d-block w-100"  height="150px;" src="hashmi/'.$row2['image'].'" alt="image">
+										<img class="d-block w-100"  height="150px;" src="Admin/'.$row2['image'].'" alt="image">
 									</div>
 									<div class="col-md-8" style="padding-top:15px;">
 										
@@ -273,7 +272,7 @@ $query="SELECT * FROM `orderitem` ORDER BY id DESC";
 										<p>'.$row2['description'].'
 										<br>Quantity : '.$row1['quantity'].'
 										</p>
-										<h5 style="color:red;">1 item price '.$row2['price'].'<small style="font-family:verdana;font-size:small">pkr</small></h5>
+										<h5 style="color:#3E065F;">1 item price '.$row2['price'].'<small style="font-family:verdana;font-size:small">pkr</small></h5>
 									</div>
 								</div>
 							
@@ -295,80 +294,43 @@ $query="SELECT * FROM `orderitem` ORDER BY id DESC";
 </div>
 </div>
 </div>
-<footer style="background:black;color:#ddd;margin-top:20px;width:100%;"> 
+<footer style="background:#3E065F;color:#ddd;margin-top:20px;"> 
 <div class="card-footer" style="">
 
 <div class="container">
+
 <div class="col-md-12" >
-<div class="row justify-content-center" style="padding-top:10px;margin:0%;">
+<div class="row justify-content-center" style="padding-top:10px;">
 <div class="col-md-3">
-
-	<div class="" >
-		<h6 style="color:#fff;">HASHMI FABRICS</h6>
-		
-
-   <?php
-																			$qury= 'SELECT * FROM `maincategory`';
-																			$reslt=mysqli_query($conn,$qury);
-																		
-																						while($row=mysqli_fetch_assoc($reslt))
-																						{
-																							$name= $row['name'];
-																							$id=$row['id'];
-																							
-																							echo '
-																							<form action="category.php" method="POST" style="display:block;">
-																							<input type="text" value="'.$id.'" style="display:none;" name="idofcat">
-																							<input type="submit" value="'.$name.'" style="background:inherit;color:#b0ababcc;border:0xp;text-align:strart" class="mybtn">
-																							</form>
-																							
-																							';
-																									
-																						}
-																						?>
-		
+<div >
+	<h6 style="color:#fff;">Address</h6>
+		<small style="color:#ffffff">Stone Palace<br>
+		Montreal<br>
+		Canada</small>
 	</div>
-	
-
 </div>
 	<div class="col-md-3" > 
 	
 		<h6 style="color:#fff;">Social Links</h6>
-<a href="#" class="fa fa-facebook btn btn-dark"></a>
-<a href="#" class="fa fa-twitter btn btn-dark"></a>
+<a href="#" class="fa fa-facebook btn" style="background-color:#8E05C2; color:#ffffff;"></a>
+<a href="#" class="fa fa-twitter btn" style="background-color:#8E05C2; color:#ffffff;"></a>
 	</div>
-<div class="col-md-3">
-
-<div class="">
-	<div >
-	<h6 style="color:#fff;">Address</h6>
-		<small style="color:#b0ababcc">Pakistan cloth house<br>
-		near Boar chowk,Dinga<br>
-		Gujrat, Pakistan</small>
-	</div>
-	
-	
-	</div>
-</div>
 <div class="col-md-3">
 <div >
 	<h6 ><a href="#" style="color:#fff;">Contacts</a></h6>
-	<small style="color:#b0ababcc">T: +92-333-3333333<br>
-		Emal: mymail@mail.com<br>
+	<small style="color:#ffffff">T: +1<br>
+		Email: stonepalace@gmail.com<br>
 		</small>
 	</div>
 </div>
 </div>
-</div>
-<div class="row " style="margin-top:30px;margin-bottom:30px;background:#201b1b;width:100%;">
+<div class="row " style="margin-top:30px;margin-bottom:30px;background:#8E05C2;width:100%;">
 	<div class="col-md-12 ">
 		<h2 style="text-align:center;"><img src='logo.jpg' height="90px" width="200px"></h2>
 	</div>
 </div>
 </div>
-
 </div>
-
 </footer>
 <script>
 function openNav() {
