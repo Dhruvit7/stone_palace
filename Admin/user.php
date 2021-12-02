@@ -89,7 +89,7 @@
 
   <div class="card-header" >
    
-   <h2 style="align:center">Search your product</h2><br />
+   <h2 style="align:center">Search Customer</h2><br />
    <div class="form-group">
     <div class="input-group">
      <span class="input-group-addon">Search</span>
@@ -131,6 +131,10 @@ $(document).ready(function(){
   }
  });
 });
+
+
+
+
 </script>
 
 
