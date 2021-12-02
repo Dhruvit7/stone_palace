@@ -312,7 +312,12 @@ else
 <div class="col-md-12" >
 <div class="row justify-content-center" style="padding-top:10px;">
 <div class="col-md-3">
-
+<div >
+	<h6 style="color:#fff;">Address</h6>
+		<small style="color:#ffffff">Stone Palace<br>
+		Montreal<br>
+		Canada</small>
+	</div>
 </div>
 	<div class="col-md-3" > 
 	
@@ -321,7 +326,13 @@ else
 <a href="#" class="fa fa-twitter btn" style="background-color:#8E05C2; color:#ffffff;"></a>
 	</div>
 <div class="col-md-3">
-
+<div >
+	<h6 ><a href="#" style="color:#fff;">Contacts</a></h6>
+	<small style="color:#ffffff">T: +1<br>
+		Email: stonepalace@gmail.com<br>
+		</small>
+	</div>
+</div>
 </div>
 <div class="row " style="margin-top:30px;margin-bottom:30px;background:#8E05C2;width:100%;">
 	<div class="col-md-12 ">
