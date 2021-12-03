@@ -86,19 +86,9 @@
 				</div>
 <!--heder end here-->
 <div class="col-md-12" id='newproduct' style='display :block;width:100%;'>
-
-  <div class="card-header" >
-   
-   <h2 style="align:center">Search your product</h2><br />
-   <div class="form-group">
-    <div class="input-group">
-     <span class="input-group-addon">Search</span>
-     <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
-    </div>
-   </div>
-   <br />
-   <div class="well" id="result"></div>
-  </div>
+</br>
+     <div class="well" id="result"></div>
+  
   
 </div>
 

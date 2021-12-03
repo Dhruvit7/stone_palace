@@ -1,11 +1,10 @@
 <?php
-
 session_start();
+$emaill = $_POST('name');
 if(isset($_SESSION['username']))
 {
 		 echo "<script>window.location.assign('index.php');</script>";
 }
-
 ?>
 <html>
 <head>
@@ -132,6 +131,7 @@ if(isset($_SESSION['username']))
         
             <form action="reset.php" method="POST" id="myloginform">
           <div class="md-form mat-2" style="margin-top:20px;">
+          <input type="text" class="form-control" name="namee" value="<?php echo "$emaill"?>"> 
         	<label for="pwd">Enter password</label>
         	<input type="text" id="pwd" class="form-control" name="pwd"> 
       	  </div>  
