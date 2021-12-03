@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2021 at 10:51 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Dec 02, 2021 at 10:38 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,7 +61,12 @@ CREATE TABLE `cart` (
 
 INSERT INTO `cart` (`id`, `user_id`, `item_id`, `ordered`, `quantity`, `date`) VALUES
 (1, '17', '3', '1', '1', '25/11/2021'),
-(2, '17', '3', 'no', '1', '25/11/2021');
+(2, '17', '3', 'no', '1', '25/11/2021'),
+(3, '18', '3', '2', '1', '25/11/2021'),
+(4, '18', '3', '2', '1', '26/11/2021'),
+(5, '18', '3', '2', '2', '26/11/2021'),
+(6, '18', '3', '3', '1', '26/11/2021'),
+(7, '18', '3', '4', '2', '1/12/2021');
 
 -- --------------------------------------------------------
 
@@ -86,9 +91,10 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `description`, `date`, `image`, `stock`, `weight`, `price`, `category`) VALUES
-(1, '54w', '54etdrgf', '18/11/2021', 'uploads/619692a10e7479.58163949.png', '5776', '56', '365', '2'),
-(2, '23423', '2wqe', '18/11/2021', 'uploads/61969c8d4929e8.03006829.png', '11', '24', '23', '2'),
-(3, '23423', 'w3ewed', '25/11/2021', 'uploads/619ffa3be4faa4.44653161.png', '9', '13', '12', '1');
+(7, 'Real Diamond', 'Natural diamond', '01/12/2021', 'uploads/61a7fdfec151a3.34028167.jpg', '1', '7', '10000', '1'),
+(4, 'Labgrown', 'blue color', '01/12/2021', 'uploads/61a7fb5989d064.93661027.jpg', '5', '2', '2500', '3'),
+(5, 'Red Diamond', 'Red diamond', '01/12/2021', 'uploads/61a7fc37ee11c6.11923698.jpg', '2', '3', '5000', '1'),
+(6, 'White Diamond', 'White CVD Diamond', '01/12/2021', 'uploads/61a7fcd843b9d9.55086003.jpg', '5', '3', '2000', '2');
 
 -- --------------------------------------------------------
 
@@ -103,6 +109,13 @@ CREATE TABLE `location` (
   `loc` text NOT NULL,
   `phone` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `location`
+--
+
+INSERT INTO `location` (`id`, `user_id`, `date`, `loc`, `phone`) VALUES
+(1, '18', '26/11/2021', 'safdsfsd', '123456789');
 
 -- --------------------------------------------------------
 
@@ -167,7 +180,10 @@ CREATE TABLE `orderitem` (
 --
 
 INSERT INTO `orderitem` (`id`, `payment_tr`, `payment_date`, `user_id`, `order_status`) VALUES
-(1, '7475878', '2021-11-24', '17', 'parcelled');
+(1, '7475878', '2021-11-24', '17', 'parcelled'),
+(2, '29020', '2021-11-26', '18', 'parcelled'),
+(3, '65236587413', '2021-11-26', '18', 'parcelled'),
+(4, '123456', '2021-12-02', '18', 'parcelled');
 
 -- --------------------------------------------------------
 
@@ -190,10 +206,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `pass`, `date`) VALUES
 (17, 'dhruv', 'dhruvitsutariya7@gmail.com', '11111111', ''),
 (16, 'sfhv', '2737@gmail.com', '11111111', ''),
-(15, 'sdfjb', 'jg@gmail.com', '11111111', 'j/m/Y'),
-(14, 'abcsjadhv', 'qwer@gmail.com', '11111111', 'j/m/Y'),
 (13, '6345', '762@GMAIL.COM', '11111111', 'j/m/Y'),
-(12, '1123', 'shh@gmail.com', '11111111', 'j/m/Y');
+(12, '1123', 'shh@gmail.com', '11111111', 'j/m/Y'),
+(18, 'Krupa', 'LATHIYAKRUPA@GMAIL.COM', '12345678', '');
 
 --
 -- Indexes for dumped tables
@@ -261,19 +276,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `maincategory`
@@ -291,13 +306,13 @@ ALTER TABLE `memoonlinedata`
 -- AUTO_INCREMENT for table `orderitem`
 --
 ALTER TABLE `orderitem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
