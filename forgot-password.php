@@ -131,7 +131,9 @@ if(isset($_SESSION['username']))
             <form action="chkfg.php" method="POST" id="myloginform">
           <div class="md-form mat-2" style="margin-top:20px;">
         	<label for="name">Enter email</label>
-        	<input type="text" id="name" class="form-control" name="name"> 
+        	<input type="text" id="name" class="form-control" name="name">
+          <label for="name">Enter New Password</label> 
+          <input type="text" id="pwd" class="form-control" name="pwd"> 
       	  </div>  
           <div class="card-foter text-right"  style="margin-top:20px;">
   		    <button type="button" class="btn " style="width: 240px; background-color:#3E065F; color:#ffffff;" onclick="document.getElementById('myloginform').submit();">Reset My Password</button>
