@@ -3,8 +3,6 @@
 session_start();
 $idforcategory= $_POST['idofcat'];
 
-
-
 $conn=mysqli_connect('localhost','root','','stone_palace');
 	
 ?>
