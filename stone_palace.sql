@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 10:38 PM
+-- Generation Time: Dec 03, 2021 at 01:53 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -66,7 +66,8 @@ INSERT INTO `cart` (`id`, `user_id`, `item_id`, `ordered`, `quantity`, `date`) V
 (4, '18', '3', '2', '1', '26/11/2021'),
 (5, '18', '3', '2', '2', '26/11/2021'),
 (6, '18', '3', '3', '1', '26/11/2021'),
-(7, '18', '3', '4', '2', '1/12/2021');
+(7, '18', '3', '4', '2', '1/12/2021'),
+(10, '18', '9', '5', '2', '3/12/2021');
 
 -- --------------------------------------------------------
 
@@ -91,10 +92,19 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `description`, `date`, `image`, `stock`, `weight`, `price`, `category`) VALUES
+(8, 'Pink Diamond', 'Pink natural diamond', '03/12/2021', 'uploads/61a9846c3996d5.98920251.jpg', '3', '2', '1000', '1'),
 (7, 'Real Diamond', 'Natural diamond', '01/12/2021', 'uploads/61a7fdfec151a3.34028167.jpg', '1', '7', '10000', '1'),
 (4, 'Labgrown', 'blue color', '01/12/2021', 'uploads/61a7fb5989d064.93661027.jpg', '5', '2', '2500', '3'),
 (5, 'Red Diamond', 'Red diamond', '01/12/2021', 'uploads/61a7fc37ee11c6.11923698.jpg', '2', '3', '5000', '1'),
-(6, 'White Diamond', 'White CVD Diamond', '01/12/2021', 'uploads/61a7fcd843b9d9.55086003.jpg', '5', '3', '2000', '2');
+(6, 'White Diamond', 'White CVD Diamond', '01/12/2021', 'uploads/61a7fcd843b9d9.55086003.jpg', '5', '3', '2000', '2'),
+(9, 'Black Diamond', 'Black Solitaire Round Diamond', '03/12/2021', 'uploads/61a985311b2722.70328805.jpg', '1', '6', '20000', '1'),
+(10, 'Natural ', 'Natural diamond', '03/12/2021', 'uploads/61a98655a43344.09677148.png', '1', '8', '20000', '1'),
+(11, 'Rough Diamond', 'Rough natural Diamond', '03/12/2021', 'uploads/61a986cb046891.03757311.jpg', '7', '5', '5000', '1'),
+(12, 'Gray Diamond', 'Natural Gray diamond', '03/12/2021', 'uploads/61a9872b73fcf2.28942260.jpg', '10', '2', '200', '1'),
+(13, 'Triangle Diamond', 'Triangle Rose Cut Diamond', '03/12/2021', 'uploads/61a9879e9a1760.64684956.jpg', '7', '3', '300', '1'),
+(14, 'Triangle White Diamond', 'Princess cut CVD Lab grown Diamond', '03/12/2021', 'uploads/61a989b4ea9b21.70807116.jpg', '5', '5', '2000', '2'),
+(15, 'Red Diamond', 'Polished Red CVD Diamond', '03/12/2021', 'uploads/61a98a14f2ed92.44089459.jpg', '3', '5', '3000', '2'),
+(16, 'Black Diamond', 'Grow lab diamond', '03/12/2021', 'uploads/61a98cf513ff52.41650654.jpg', '7', '2', '400', '2');
 
 -- --------------------------------------------------------
 
@@ -183,7 +193,8 @@ INSERT INTO `orderitem` (`id`, `payment_tr`, `payment_date`, `user_id`, `order_s
 (1, '7475878', '2021-11-24', '17', 'parcelled'),
 (2, '29020', '2021-11-26', '18', 'parcelled'),
 (3, '65236587413', '2021-11-26', '18', 'parcelled'),
-(4, '123456', '2021-12-02', '18', 'parcelled');
+(4, '123456', '2021-12-02', '18', 'parcelled'),
+(5, '123456', '2021-12-03', '18', 'parcelled');
 
 -- --------------------------------------------------------
 
@@ -276,13 +287,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `location`
@@ -306,7 +317,7 @@ ALTER TABLE `memoonlinedata`
 -- AUTO_INCREMENT for table `orderitem`
 --
 ALTER TABLE `orderitem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
