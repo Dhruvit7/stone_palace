@@ -86,6 +86,11 @@
 				</div>
 <!--heder end here-->
 <div class="col-md-12" id='newproduct' style='display :block;width:100%;'>
+<<<<<<< HEAD
+</br>
+     <div class="well" id="result"></div>
+  
+=======
 
   <div class="card-header" >
    
@@ -99,6 +104,7 @@
    <br />
    <div class="well" id="result"></div>
   </div>
+>>>>>>> 380fa3006bdc01139a0098829f600bccae840be0
   
 </div>
 
