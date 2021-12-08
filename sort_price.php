@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-$idforcategory= $_POST['idofcat'];
-$_SESSION["cato"] = $_POST['idofcat'];
+$idforcategory= $_SESSION['cato'];
 $conn=mysqli_connect('localhost','root','','stone_palace');
 	
 ?>
@@ -17,6 +16,7 @@ $conn=mysqli_connect('localhost','root','','stone_palace');
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 <style>
 body {
   font-family:Arial Black;
@@ -153,7 +153,7 @@ body {
  <nav class="navbar navbar-expand-md navbar-dark" style="width:100%;background:#3E065F;">
         <a href="#" class="navbar-brand">
            <h3 style="font-family:Trajan"><b><span style="font-size:30px;cursor:pointer;margin-right:2%;margin-left:2%" onclick="openNav()">&#9776;</span>
-		   <span onclick="window.location.assign('index.php')">Stone Palace</span>
+		   <span onclick="window.location.assign('index.php')"> Stone Palace</span>
 
 </b></h3>
         </a>
@@ -202,50 +202,17 @@ else
 }
 	?>
   <hr>
-  <h6 style="padding:5px;text-align:center;">Categories</h6>
-
-   <?php
-																			$qury= 'SELECT * FROM `maincategory`';
-																			$reslt=mysqli_query($conn,$qury);
-																		
-																						while($row=mysqli_fetch_assoc($reslt))
-																						{
-																							$name= $row['name'];
-																							$id=$row['id'];
-																							if($id==$idforcategory)
-																							{
-																								$categoryname=$name;
-																							}
-																							echo '
-																							<form action="category.php" method="POST" style="display:block;">
-																							<input type="text" value="'.$id.'" style="display:none;" name="idofcat">
-																							<input type="submit" value="'.$name.'" style="background:inherit" class="mybtn">
-																							</form>
-																							
-																							';
-																									
-																						}
-																						?>
-  
   
 </div>
 
-<h4 style="text-align:center;width:100%;border-top:1px solid;border-bottom:1px solid;" class="card-header" >Categories / <?php echo $categoryname; ?> Collection</h4>
-<form action="sort_price.php" method="POST" style="display:block;">
-	<input type="text" value="<?php $idforcategory ?>" style="display:none;" name="idforcat">
-	<input type="submit" class="btn"   value="sort by price" style="width:100%;text-align:center; color:white; background-color:#3E065F;" >
-</form>
-<form action="sort_stock.php" method="POST" style="display:block;">
-	<input type="text" value="<?php $idforcategory ?>" style="display:none;" name="idforcat">
-	<input type="submit" class="btn"   value="sort by stock" style="width:100%;text-align:center; color:white; background-color:#3E065F;" >
-</form>
+
 <div class="col-md-12"  style="font-family:Bauhaus">
 <div class="row justify-content-center" style="margin-top:10px;">
 	<?php
 																			$qury= 'SELECT * FROM `maincategory`';
 																			$reslt=mysqli_query($conn,$qury);
 																				
-																			$query= 'SELECT * FROM `items`';
+																			$query= 'SELECT * FROM `items` order by ABS(`price`)';
 																			$count=0;
 																			$result=mysqli_query($conn,$query);
 																						while($row=mysqli_fetch_assoc($result))
@@ -296,6 +263,7 @@ else
 																					}
 																					if($count==0)
 																					{
+																						echo $_POST['idforcat'];
 																						echo '<h4 style="text-align:center">No items in this category!</h4>';
 																					}
 																						
